@@ -7,9 +7,6 @@ canvas.height = 600;
 centerX = 200;
 centerY = 300;
 
-
-
-
 let radiusBall = 10;
 
 let coordBallY = 3;
@@ -35,7 +32,6 @@ addEventListener('keydown', (key) => {
         }
         strX -= 10
     }
-    console.log(strX);
 });
 
 function moveBall(){
@@ -59,23 +55,18 @@ function moveBall(){
     }
 
     centerX += coordBallX
+
     if(centerX > 390){
         coordBallX = -coordBallX
-        console.log('qwe');
     } 
     if(centerX < 10){
         coordBallX = -coordBallX
-        console.log('qwe');
     } 
-    console.log(centerX);
-    
+   
     ctx.fillStyle = 'red'
     ctx.arc(centerX, centerY, radiusBall, 0, Math.PI * 2);
     ctx.fill()
 
-    
-
-    
     if( centerY > 590){
         alert('sasai kudasai')
         cancelAnimationFrame()
